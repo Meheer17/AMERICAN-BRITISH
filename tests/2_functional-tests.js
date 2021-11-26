@@ -9,6 +9,8 @@ let Translator = require('../components/translator.js');
 
 suite('Functional Tests', () => {
 
+    suite('TESTS', () => {
+
     test('Translation with text and locale fields: POST request to /api/translate', (done) => {
         chai
             .request(server)
@@ -97,4 +99,5 @@ suite('Functional Tests', () => {
             });
     });
 
+    });
 });
