@@ -39,9 +39,9 @@ class Translator {
      return translated;
  }
 
- translate(text, dict, titles, timeRegex, locale) {
-    const lowerText = text.toLowerCase();
-    const matchesMap = {};
+ translate(text, dict, titles, timeRegex, locale){
+     const  lowerText = text.toLowerCase();
+     const matchesMap = {};  
      Object.entries(titles).map(([k, v]) => {
          if(lowerText.includes(k)) {
              matchesMap[k] = v.charAt(0).toUpperCase() + v.slice(1);
@@ -59,8 +59,8 @@ class Translator {
      });
 
      lowerText.match(/(\w+([-'])(\w+)?['-]?(\w+))|\w+/g).forEach((word) => {
-         if (dict[word]) matchesMap[word] = dict[word]
-     });
+      if (dict[word]) matchesMap[word] = dict[word];
+    });
 
      const matchedTimes = lowerText.match(timeRegex);
 
